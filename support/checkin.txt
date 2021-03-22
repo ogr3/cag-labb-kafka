@@ -1,0 +1,9 @@
+
+# create topic
+$ k-topics --create --partitions 1 --replication-factor 2 --topic kafka-lab-checkin
+
+# start consumer
+$ k-consumer --new-consumer --topic kafka-lab-checkin
+
+# start producer
+$ k-producer --topic kafka-lab-checkin

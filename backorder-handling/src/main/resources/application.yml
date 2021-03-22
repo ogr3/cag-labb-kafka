@@ -1,0 +1,8 @@
+server.port: 9005
+
+stock-topic: stocks-dawi
+
+kafka:
+  servers:
+  orderTopic: orders-dawi
+  backorderTopic: backorders-dawi

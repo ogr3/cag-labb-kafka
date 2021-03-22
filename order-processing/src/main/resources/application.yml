@@ -1,0 +1,7 @@
+server.port: 9003
+
+kafka:
+  servers:
+  inTopic: orders-dawi
+  packTopic: packing-dawi
+  backorderTopic: backorders-dawi
