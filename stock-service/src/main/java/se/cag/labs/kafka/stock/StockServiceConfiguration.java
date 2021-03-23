@@ -12,4 +12,6 @@ public class StockServiceConfiguration {
     private String topic;
     private int replication;
     private int partitions;
+    private String application;
+    private String globalStore;
 }
