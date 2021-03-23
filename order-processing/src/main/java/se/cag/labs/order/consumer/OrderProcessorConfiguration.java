@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @Data
 public class OrderProcessorConfiguration {
     private String servers;
+    private String groupId;
     private String inTopic;
     private String packTopic;
     private String backorderTopic;

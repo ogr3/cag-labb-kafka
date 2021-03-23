@@ -5,3 +5,4 @@ kafka:
   inTopic: orders-dawi
   packTopic: packing-dawi
   backorderTopic: backorders-dawi
+  groupId: order-processor-dawi

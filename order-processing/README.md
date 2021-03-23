@@ -13,9 +13,10 @@ This will be done in 2 different excersises/steps,
 I would suggest that you actually also have the topic create code in it
 for consistency when running on a different cluster.
 
-Two things you have to do:
+Things you have to do for the first excercise:
 
-1. Change the orderTopic setting in application.yml to something of your own (same as in order-producer...)
+1. Change the inTopic (we use this first) setting in application.yml to something of your own (same as in order-producer...)
+2. Set the groupId in application.yml to your own.
 2. Set the server settings in the application.yml to point to the servers i provided.
 3. Whereever you need to use a consumerGroup string, use a unique one as well...
 

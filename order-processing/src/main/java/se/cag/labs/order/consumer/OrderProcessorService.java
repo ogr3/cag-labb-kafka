@@ -1,5 +1,6 @@
 package se.cag.labs.order.consumer;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 /**
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
  * Iteration 2: Streams Kafka topic and sends orders to 2 distinct Sink:s.
  */
 @Service
+@Slf4j
 public class OrderProcessorService {
 
     private OrderProcessorConfiguration configuration;
