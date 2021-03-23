@@ -1,3 +1,6 @@
+
+Exercise "Order Consumer" 
+
 Use this link:
 
 https://www.baeldung.com/spring-kafka
@@ -5,24 +8,20 @@ https://www.baeldung.com/spring-kafka
 and update the OrderProcessorResource / OrderProcessorConfiguration,
 to consume orders created from the kafka topic.
 
-This will be done in 2 different excersises/steps, 
+* first we just consume and log the orders, to get the feel of it.
 
-1) first we just consume and log the orders, to get the feel of it.
-2) we will stream it a bit...
+Since the producer have the topic creation code, we can omit that for now.
 
-I would suggest that you actually also have the topic create code in it
-for consistency when running on a different cluster.
+Things you have to do for this excercise:
 
-Things you have to do for the first excercise:
-
-1. Change the inTopic (we use this first) setting in application.yml to something of your own (same as in order-producer...)
-2. Set the groupId in application.yml to your own.
-2. Set the server settings in the application.yml to point to the servers i provided.
-3. Whereever you need to use a consumerGroup string, use a unique one as well...
+1. Change the kafka.inTopic (we use this first) setting in application.yml to something of your own (same as in order-producer...)
+2. Set the kafka.groupId in application.yml to your own.
+3. Set the server settings in the application.yml to point to the servers i provided.
 
 If you have tested your order-producer, there should already be orders to 
 consume, so when you fire it up for the first time it depends a bit how you 
-configured your consumer factory, default is 'latest':
+configured your consumer factory, default is 'latest', but 'earliest' gives a
+different behaviour:
 
 https://kafka.apache.org/24/javadoc/constant-values.html#org.apache.kafka.clients.consumer.ConsumerConfig.AUTO_OFFSET_RESET_CONFIG
 
@@ -58,5 +57,6 @@ A test you can make is to:
 2. Then shut down your consumer.
 3. Then add an order with the order-producer.
 4. Now the command above should say lag = 1, there is one message not consumed yet for that consumer group.
+5. When you fire up your order-processor again, it will immediately consume the order and lag = 0 will be back...
 
    
