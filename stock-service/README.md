@@ -12,11 +12,12 @@ Fire it up to get the topic created.
 
 Use links:
 
+https://www.confluent.io/blog/spring-for-apache-kafka-deep-dive-part-2-apache-kafka-spring-cloud-stream/
 https://docs.spring.io/spring-kafka/docs/current/api/org/springframework/kafka/annotation/EnableKafkaStreams.html
 https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-kafka-streams
 
 and update the StockServiceConfiguration and StockServiceResource,
-to use a GlobalKTable / KeyValuePairStore from the kafka topic to serve stocks.
+to use a GlobalKTable / ReadOnlyKeyValueStore from the kafka topic to serve stocks.
 
 This link contains some hints on which attributes you need to set on the StreamsConfig:
 https://stackoverflow.com/questions/51733039/kafka-streams-with-spring-boot
