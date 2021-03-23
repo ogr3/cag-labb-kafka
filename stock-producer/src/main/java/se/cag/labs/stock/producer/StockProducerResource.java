@@ -35,5 +35,4 @@ public class StockProducerResource {
         // publish a stock value, KEYED topic, use sku as key
     }
 
-
 }

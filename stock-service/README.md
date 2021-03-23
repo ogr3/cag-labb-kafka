@@ -1,8 +1,14 @@
 
-# Exercise "Stock Service" 
+# Exercise "Stock Service - Prepping Producer" 
 
 So first, I have prepared the producer, so you should first just go into the stock-producer/resources/application.yml
-and setup the IP addresses of the servers, and your own topic name, then fire it up to get the topics created.
+and setup the IP addresses of the servers, and your own topic name, as usual.
+
+Then, you need to add the actual producing code, this topic should be keyed based on sku.
+
+Fire it up to get the topic created.
+
+# Exercise "Stock Service - Making a superfast service."
 
 Use links:
 
