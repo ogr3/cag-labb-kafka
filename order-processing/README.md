@@ -21,7 +21,24 @@ Things you have to do for the first excercise:
 3. Whereever you need to use a consumerGroup string, use a unique one as well...
 
 If you have tested your order-producer, there should already be orders to 
-consume, so when you fire it up for the first time it should be logging those order directly.
+consume, so when you fire it up for the first time it depends a bit how you 
+configured your consumer factory, default is 'latest':
+
+https://kafka.apache.org/24/javadoc/constant-values.html#org.apache.kafka.clients.consumer.ConsumerConfig.AUTO_OFFSET_RESET_CONFIG
+
+```
+   props.put(
+          ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, 
+          'earliest');
+```
+
+or 
+
+```
+   props.put(
+          ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, 
+          'latest');
+```
 
 Once your application is started you can find your consumer group here:
 
