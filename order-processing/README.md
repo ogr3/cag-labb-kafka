@@ -1,5 +1,5 @@
 
-Exercise "Order Consumer" 
+# Exercise "Order Consumer" 
 
 Use this link:
 
@@ -53,10 +53,14 @@ $ k-groups --describe --group <your group name>
 
 A test you can make is to:
 
-1. Fire up your consumer for the first time, that way it will consume all messages, and the command above will say lag = 0 for your consumer group.
+1. Fire up your consumer for the first time, that way it will consume all messages or start at the end, and then command above will say lag = 0 for your consumer group.
 2. Then shut down your consumer.
 3. Then add an order with the order-producer.
 4. Now the command above should say lag = 1, there is one message not consumed yet for that consumer group.
 5. When you fire up your order-processor again, it will immediately consume the order and lag = 0 will be back...
 
    
+# Exercise "Streaming Orders"
+
+Now it is time to actually implement a streaming application. So we will simply
+create a streaming application with a latch that actually 

@@ -2,5 +2,5 @@ server.port: 9002
 kafka:
   servers:
   topic: stocks-dawi
-  partitions: 1
-  replication: 3
+  application: stock-streaming-dawi
+  globalStore: stock-store-dawi
