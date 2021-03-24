@@ -18,9 +18,12 @@ no cluster no fun. My Kafka servers are 2.6.1 , with Scala 2.12.
     > sudo ln -s kafka_2.12-2.6.1 kafka
     > sudo chown -R dawi:dawi /opt/kafka /opt/kafka_2.12-2.6.1
     ```
-  - if you want to be really prepared, also setup the aliases i have in aliases.sh
-    BUT: Make sure to add the IP address variables I provided in the email first in the
-    file before executing the command below...
-    ```
-    $ source aliases.sh
-    ```
+
+- if you want to be really prepared, also setup the aliases i have in 'aliases.sh'
+  BUT: Make sure to add the IP address variables I provided in the email first in the
+  file before executing the command below, otherwise you will have issues reaching the 
+  servers. ALSO: This file actually refers your kafka install above, so if you did install 
+  somewhere else than /opt/kafka you better update the path to the binaries as well...
+  ```
+  $ source aliases.sh
+  ```
