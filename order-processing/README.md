@@ -79,6 +79,8 @@ These are some useful links:
   and some hints n parameters, I would suggest setting at least 
   - APPLICATION_ID_CONFIG
   - BOOTSTRAP_SERVERS_CONFIG
+  - ConsumerConfig.AUTO_OFFSET_RESET_CONFIG -> 'earliest', you want to start from the beginning always here.
+  - DEFAULT_KEY_SERDE_CLASS_CONFIG, DEFAULT_VALUE_SERDE_CLASS_CONFIG, both to Serde.String().
   https://www.codota.com/web/assistant/code/rs/5c76b28096b4b300015b40e5#L82
 
 - How to get a handle to a StreamsBuilder and configure it (spring boot will do the rest)
