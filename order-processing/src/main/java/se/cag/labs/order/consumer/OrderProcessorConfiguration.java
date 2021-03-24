@@ -13,4 +13,5 @@ public class OrderProcessorConfiguration {
     private String inTopic;
     private String packTopic;
     private String backorderTopic;
+    private String applicationId;
 }

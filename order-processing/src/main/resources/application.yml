@@ -3,6 +3,7 @@ server.port: 9003
 kafka:
   servers:
   inTopic: orders-dawi
+  applicationId: orders-streaming-dawi
   packTopic: packing-dawi
   backorderTopic: backorders-dawi
   groupId: order-processor-dawi

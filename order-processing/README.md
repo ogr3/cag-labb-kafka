@@ -63,4 +63,33 @@ A test you can make is to:
 # Exercise "Streaming Orders"
 
 Now it is time to actually implement a streaming application. So we will simply
+<<<<<<< Updated upstream
 create a streaming application with a latch that actually 
+=======
+create a streaming application with a branch that actually splits our orders into 2 topics. 
+
+Make your own inventive predicate on which orders to pack or send to backorder :-P.
+
+Examples are sparse online unfortunately...
+
+These are some useful links:
+
+- We need to enable kafka streams processing in spring, and provide configuration for it:
+  https://docs.spring.io/spring-kafka/docs/current/api/org/springframework/kafka/annotation/EnableKafkaStreams.html
+  and some hints n parameters, I would suggest setting at least 
+  - APPLICATION_ID_CONFIG
+  - BOOTSTRAP_SERVERS_CONFIG
+  https://www.codota.com/web/assistant/code/rs/5c76b28096b4b300015b40e5#L82
+
+- How to get a handle to a StreamsBuilder and configure it (spring boot will do the rest)
+  Paragraph 14.3.3 is the structural thing to use here. And you will probably want to use the .to method in some way
+  
+  https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-kafka-streams
+
+- The interface of the streamsbuilder to use. 
+
+  https://kafka.apache.org/23/javadoc/org/apache/kafka/streams/StreamsBuilder.html
+
+- A functional example using Predicates and the branch method on a KStream.
+  https://github.com/spring-cloud/spring-cloud-stream-samples/blob/master/kafka-streams-samples/kafka-streams-branching/src/main/java/kafka/streams/branching/KafkaStreamsBranchingSample.java
+  
